@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="340" viewBox="0 0 840 340" role="img" aria-label="RuneYang123 Terminal Profile Card (Dark)">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a0f14"/>
+    </linearGradient>
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fb950"/>
+      <stop offset="100%" stop-color="#39c5cf"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="18%" cy="52%" r="36%">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.11"/>
+      <stop offset="100%" stop-color="#3fb950" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="window-clip">
+      <rect x="1" y="1" width="838" height="338" rx="11"/>
+    </clipPath>
+    <style>
+      .mono {
+        font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      }
+      .title { font-size: 12px; fill: #8b949e; font-weight: 500; }
+      .prompt-user { font-size: 13px; fill: #3fb950; font-weight: 700; }
+      .prompt-sep { font-size: 13px; fill: #6e7681; }
+      .prompt-path { font-size: 13px; fill: #58a6ff; font-weight: 700; }
+      .prompt-cmd { font-size: 13px; fill: #e6edf3; }
+      .hdr-user { font-size: 15px; fill: #3fb950; font-weight: 700; }
+      .hdr-at { font-size: 15px; fill: #6e7681; }
+      .hdr-host { font-size: 15px; fill: #58a6ff; font-weight: 700; }
+      .key { font-size: 12.5px; fill: #39c5cf; font-weight: 700; }
+      .colon { font-size: 12.5px; fill: #484f58; }
+      .val { font-size: 12.5px; fill: #c9d1d9; }
+      .val-em { font-size: 12.5px; fill: #e6edf3; font-weight: 600; }
+      .val-mail { font-size: 12.5px; fill: #58a6ff; }
+      .badge-txt { font-size: 10.5px; fill: #3fb950; font-weight: 700; letter-spacing: 1px; }
+      .emblem-sub { font-size: 10.5px; fill: #8b949e; letter-spacing: 1.5px; }
+      .cursor {
+        fill: #3fb950;
+        animation: blink 1.1s steps(1, end) infinite;
+      }
+      .live-dot {
+        fill: #3fb950;
+        animation: pulse 2.2s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#window-clip)">
+    <!-- Window Background -->
+    <rect x="0" y="0" width="840" height="340" fill="url(#bg-grad)"/>
+    <rect x="0" y="36" width="840" height="304" fill="url(#glow)"/>
+
+    <!-- Title Bar -->
+    <rect x="0" y="0" width="840" height="36" fill="#161b22"/>
+    <line x1="0" y1="36" x2="840" y2="36" stroke="#30363d" stroke-width="1"/>
+
+    <!-- Window Control Dots -->
+    <circle cx="22" cy="18" r="5.5" fill="#ff5f56"/>
+    <circle cx="40" cy="18" r="5.5" fill="#ffbd2e"/>
+    <circle cx="58" cy="18" r="5.5" fill="#27c93f"/>
+
+    <!-- Title Text -->
+    <text x="420" y="22" text-anchor="middle" class="mono title">rune@siem-node: ~ — zsh</text>
+
+    <!-- Live Status Pill -->
+    <rect x="736" y="9" width="84" height="18" rx="9" fill="#0d1117" stroke="#238636" stroke-width="1"/>
+    <circle cx="749" cy="18" r="3" class="live-dot"/>
+    <text x="758" y="21.5" class="mono badge-txt">SEC-OPS</text>
+
+    <!-- Top Command Prompt -->
+    <text x="24" y="64" class="mono">
+      <tspan class="prompt-user">rune@siem-node</tspan><tspan class="prompt-sep">:</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-sep">$ </tspan><tspan class="prompt-cmd">neofetch --profile security</tspan>
+    </text>
+
+    <!-- Left Column: Cyber Shield / SIEM Telemetry Emblem -->
+    <g transform="translate(46, 92)">
+      <!-- Subtle Corner Brackets -->
+      <path d="M 0 14 L 0 0 L 14 0" fill="none" stroke="#30363d" stroke-width="1.5"/>
+      <path d="M 162 0 L 176 0 L 176 14" fill="none" stroke="#30363d" stroke-width="1.5"/>
+      <path d="M 0 162 L 0 176 L 14 176" fill="none" stroke="#30363d" stroke-width="1.5"/>
+      <path d="M 162 176 L 176 176 L 176 162" fill="none" stroke="#30363d" stroke-width="1.5"/>
+
+      <!-- Outer Shield Wireframe -->
+      <path d="M 88 18 L 144 40 L 144 92 C 144 128 119 151 88 162 C 57 151 32 128 32 92 L 32 40 Z"
+            fill="url(#shield-grad)" stroke="url(#stroke-grad)" stroke-width="2" stroke-linejoin="round"/>
+      <!-- Inner Shield Frame -->
+      <path d="M 88 30 L 132 47 L 132 90 C 132 119 112 138 88 148 C 64 138 44 119 44 90 L 44 47 Z"
+            fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3 3"/>
+
+      <!-- Telemetry Pulse Line Inside Shield -->
+      <polyline points="52,92 67,92 74,74 83,110 92,66 101,99 108,92 124,92"
+                fill="none" stroke="#3fb950" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Top Terminal Chevron -->
+      <text x="88" y="60" text-anchor="middle" class="mono" font-size="11" fill="#58a6ff" font-weight="700">&gt;_</text>
+
+      <!-- Shield Nodes -->
+      <circle cx="88" cy="18" r="2.8" fill="#3fb950"/>
+      <circle cx="144" cy="40" r="2.4" fill="#39c5cf"/>
+      <circle cx="32" cy="40" r="2.4" fill="#39c5cf"/>
+      <circle cx="88" cy="162" r="2.8" fill="#58a6ff"/>
+
+      <!-- Label Below Emblem -->
+      <text x="88" y="196" text-anchor="middle" class="mono emblem-sub">SIEM // SEC-ENG</text>
+    </g>
+
+    <!-- Vertical Subtle Divider -->
+    <line x1="244" y1="88" x2="244" y2="286" stroke="#21262d" stroke-width="1"/>
+
+    <!-- Right Column: Neofetch Info -->
+    <g transform="translate(268, 102)">
+      <!-- Header -->
+      <text x="0" y="0" class="mono">
+        <tspan class="hdr-user">rune</tspan><tspan class="hdr-at">@</tspan><tspan class="hdr-host">RuneYang123</tspan>
+      </text>
+      <line x1="0" y1="10" x2="544" y2="10" stroke="#30363d" stroke-width="1"/>
+
+      <!-- Key-Value Rows (Fixed X columns for guaranteed alignment) -->
+      <text x="0" y="34" class="mono key">ROLE</text>
+      <text x="72" y="34" class="mono colon">:</text>
+      <text x="88" y="34" class="mono val-em">Security Engineer · SIEM Engineer</text>
+
+      <text x="0" y="57" class="mono key">FOCUS</text>
+      <text x="72" y="57" class="mono colon">:</text>
+      <text x="88" y="57" class="mono val">Detection Engineering · Log Pipeline · Threat Hunting</text>
+
+      <text x="0" y="80" class="mono key">SIEM</text>
+      <text x="72" y="80" class="mono colon">:</text>
+      <text x="88" y="80" class="mono val">Splunk · Elastic (ELK) · Sentinel · Wazuh</text>
+
+      <text x="0" y="103" class="mono key">RULES</text>
+      <text x="72" y="103" class="mono colon">:</text>
+      <text x="88" y="103" class="mono val">Sigma · YARA · SPL · KQL · EQL</text>
+
+      <text x="0" y="126" class="mono key">STACK</text>
+      <text x="72" y="126" class="mono colon">:</text>
+      <text x="88" y="126" class="mono val">Python · Bash · Go · Linux · Docker · Suricata</text>
+
+      <text x="0" y="149" class="mono key">MAIL</text>
+      <text x="72" y="149" class="mono colon">:</text>
+      <text x="88" y="149" class="mono val-mail">runeyang123@outlook.com</text>
+
+      <!-- Terminal Color Swatches -->
+      <g transform="translate(0, 168)">
+        <rect x="0" y="0" width="24" height="12" rx="2.5" fill="#21262d"/>
+        <rect x="30" y="0" width="24" height="12" rx="2.5" fill="#f85149"/>
+        <rect x="60" y="0" width="24" height="12" rx="2.5" fill="#3fb950"/>
+        <rect x="90" y="0" width="24" height="12" rx="2.5" fill="#d29922"/>
+        <rect x="120" y="0" width="24" height="12" rx="2.5" fill="#58a6ff"/>
+        <rect x="150" y="0" width="24" height="12" rx="2.5" fill="#bc8cff"/>
+        <rect x="180" y="0" width="24" height="12" rx="2.5" fill="#39c5cf"/>
+        <rect x="210" y="0" width="24" height="12" rx="2.5" fill="#e6edf3"/>
+      </g>
+    </g>
+
+    <!-- Bottom Interactive Prompt -->
+    <line x1="24" y1="298" x2="816" y2="298" stroke="#161b22" stroke-width="1"/>
+    <text x="24" y="321" class="mono">
+      <tspan class="prompt-user">rune@siem-node</tspan><tspan class="prompt-sep">:</tspan><tspan class="prompt-path">~</tspan><tspan class="prompt-sep">$ </tspan><tspan class="prompt-cmd">tail -f /var/log/siem/alerts.log</tspan>
+    </text>
+    <rect x="418" y="309" width="8" height="14" rx="1" class="cursor"/>
+  </g>
+
+  <!-- Outer Border -->
+  <rect x="0.75" y="0.75" width="838.5" height="338.5" rx="11.5" fill="none" stroke="#30363d" stroke-width="1.5"/>
+</svg>
